@@ -9,6 +9,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Our Doctors", path: "/doctors" },
+  { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -93,7 +94,11 @@ const Navbar = () => {
                 Emergency
               </a>
             </Button>
-            <Button size="sm" className="gap-2 bg-gradient-primary hover:opacity-90 shadow-soft" asChild>
+            <Button
+              size="sm"
+              className="gap-2 bg-gradient-primary hover:opacity-90 shadow-soft"
+              asChild
+            >
               <Link to="/appointment">
                 <Calendar className="w-4 h-4" />
                 Book Appointment
@@ -106,7 +111,11 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-foreground"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </motion.header>
@@ -147,7 +156,10 @@ const Navbar = () => {
                     Emergency Call
                   </a>
                 </Button>
-                <Button className="gap-2 bg-gradient-primary shadow-soft" asChild>
+                <Button
+                  className="gap-2 bg-gradient-primary shadow-soft"
+                  asChild
+                >
                   <Link to="/appointment">
                     <Calendar className="w-4 h-4" />
                     Book Appointment

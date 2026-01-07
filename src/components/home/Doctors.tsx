@@ -5,29 +5,29 @@ import { Button } from "@/components/ui/button";
 
 const doctors = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Dr. P.U. Agu",
     specialty: "Gynecologist & Obstetrician",
     experience: "15+ years",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
+    image: "/dragu.png",
   },
-  {
-    name: "Dr. James Williams",
-    specialty: "Pediatrician",
-    experience: "12+ years",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "Dr. Priya Sharma",
-    specialty: "Fertility Specialist",
-    experience: "10+ years",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "Dr. Michael Brown",
-    specialty: "Family Medicine",
-    experience: "18+ years",
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80",
-  },
+  // {
+  //   name: "Dr. James Williams",
+  //   specialty: "Pediatrician",
+  //   experience: "12+ years",
+  //   image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80",
+  // },
+  // {
+  //   name: "Dr. Priya Sharma",
+  //   specialty: "Fertility Specialist",
+  //   experience: "10+ years",
+  //   image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80",
+  // },
+  // {
+  //   name: "Dr. Michael Brown",
+  //   specialty: "Family Medicine",
+  //   experience: "18+ years",
+  //   image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80",
+  // },
 ];
 
 const containerVariants = {
@@ -58,12 +58,11 @@ const Doctors = () => {
             Our Medical Team
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Meet Our{" "}
-            <span className="text-gradient">Expert Doctors</span>
+            Meet Our <span className="text-gradient">Expert Doctors</span>
           </h2>
           <p className="text-muted-foreground">
-            Our team of board-certified specialists brings decades of combined experience 
-            and a shared commitment to exceptional patient care.
+            Our team of board-certified specialists brings decades of combined
+            experience and a shared commitment to exceptional patient care.
           </p>
         </motion.div>
 
@@ -73,14 +72,10 @@ const Doctors = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid items-center justify-center md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {doctors.map((doctor, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              className="group"
-            >
+            <motion.div key={idx} variants={itemVariants} className="group">
               <div className="relative rounded-2xl overflow-hidden shadow-card">
                 {/* Image */}
                 <div className="relative h-80 overflow-hidden">
@@ -90,7 +85,7 @@ const Doctors = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                  
+
                   {/* Social Links */}
                   <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <motion.a
@@ -132,7 +127,11 @@ const Doctors = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button size="lg" className="gap-2 bg-gradient-primary hover:opacity-90 shadow-soft" asChild>
+          <Button
+            size="lg"
+            className="gap-2 bg-gradient-primary hover:opacity-90 shadow-soft"
+            asChild
+          >
             <Link to="/doctors">
               View All Doctors
               <ArrowRight className="w-4 h-4" />

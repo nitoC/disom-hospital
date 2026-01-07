@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Clock } from "lucide-react";
+import {
+  Heart,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Clock,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +37,10 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Disom Specialist Hospital is a specialist healthcare facility established with the vision of providing quality healthcare services to all by a team of highly qualified health professionals and specialists.
+              Disom Specialist Hospital is a specialist healthcare facility
+              established with the vision of providing quality healthcare
+              services to all by a team of highly qualified health professionals
+              and specialists.
             </p>
             <div className="flex gap-3">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
@@ -50,12 +63,21 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-lg font-display font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-display font-semibold mb-6">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
-              {["About Us", "Our Services", "Meet Our Doctors", "Book Appointment", "Contact Us"].map((item) => (
+              {[
+                "About Us",
+                "Our Services",
+                "Meet Our Doctors",
+                "Book Appointment",
+                "Gallery",
+                "Contact Us",
+              ].map((item) => (
                 <li key={item}>
                   <Link
-                    to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                     className="text-sm opacity-80 hover:opacity-100 hover:text-primary transition-all flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -73,9 +95,18 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="text-lg font-display font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-display font-semibold mb-6">
+              Our Services
+            </h4>
             <ul className="space-y-3">
-              {["Gynecology", "Obstetrics", "Pediatrics", "Fertility Care", "Ultrasound", "Family Medicine"].map((item) => (
+              {[
+                "Gynecology",
+                "Obstetrics",
+                "Pediatrics",
+                "Fertility Care",
+                "Ultrasound",
+                "Family Medicine",
+              ].map((item) => (
                 <li key={item}>
                   <Link
                     to="/services"
@@ -96,23 +127,33 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <h4 className="text-lg font-display font-semibold mb-6">Contact Info</h4>
+            <h4 className="text-lg font-display font-semibold mb-6">
+              Contact Info
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
                 <span className="text-sm opacity-80">
-                  1A Idemili Dr, Independence Layout,<br />Enugu 400103, Enugu
+                  1A Idemili Dr, Independence Layout,
+                  <br />
+                  Enugu 400103, Enugu
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:08119736394" className="text-sm opacity-80 hover:text-primary">
+                <a
+                  href="tel:08119736394"
+                  className="text-sm opacity-80 hover:text-primary"
+                >
                   0811 973 6394
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:care@disom.hospital" className="text-sm opacity-80 hover:text-primary">
+                <a
+                  href="mailto:care@disom.hospital"
+                  className="text-sm opacity-80 hover:text-primary"
+                >
                   care@disom.hospital
                 </a>
               </li>
@@ -135,8 +176,15 @@ const Footer = () => {
             © {currentYear} Disom Hospital. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm opacity-70">
-            <Link to="/privacy" className="hover:opacity-100 hover:text-primary">Privacy Policy</Link>
-            <Link to="/terms" className="hover:opacity-100 hover:text-primary">Terms of Service</Link>
+            <Link
+              to="/privacy"
+              className="hover:opacity-100 hover:text-primary"
+            >
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="hover:opacity-100 hover:text-primary">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>

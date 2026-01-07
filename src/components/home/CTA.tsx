@@ -14,9 +14,18 @@ const CTA = () => {
 
       {/* Pattern Overlay */}
       <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
           <defs>
-            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <pattern
+              id="grid"
+              width="10"
+              height="10"
+              patternUnits="userSpaceOnUse"
+            >
               <circle cx="1" cy="1" r="1" fill="currentColor" />
             </pattern>
           </defs>
@@ -50,8 +59,9 @@ const CTA = () => {
           </h2>
 
           <p className="text-lg text-primary-foreground/80 mb-10 max-w-2xl mx-auto">
-            Book your appointment today and take the first step towards better health. 
-            Our team of experts is ready to provide you with personalized, compassionate care.
+            Book your appointment today and take the first step towards better
+            health. Our team of experts is ready to provide you with
+            personalized, compassionate care.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -72,7 +82,7 @@ const CTA = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
+                className="gap-2 border-2 border-primary-foreground/30 hover:bg-primary-foreground/10 text-base px-8"
                 asChild
               >
                 <a href="tel:+1234567890">
@@ -91,14 +101,20 @@ const CTA = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-8 mt-12 pt-12 border-t border-primary-foreground/10"
           >
-            {["24/7 Emergency", "Same-Day Appointments", "Insurance Accepted", "Free Consultation"].map(
-              (item, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-primary-foreground/70">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span className="text-sm">{item}</span>
-                </div>
-              )
-            )}
+            {[
+              "24/7 Emergency",
+              "Same-Day Appointments",
+              "Insurance Accepted",
+              // "Free Consultation",
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-2 text-primary-foreground/70"
+              >
+                <div className="w-2 h-2 rounded-full bg-primary" />
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

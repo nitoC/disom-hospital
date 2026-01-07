@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Appointment from "./pages/Appointment";
 import NotFound from "./pages/NotFound";
 import FloatingButtons from "./components/layout/FloatingButtons";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

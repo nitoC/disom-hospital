@@ -1,56 +1,76 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Heart, Baby, Stethoscope, Scan, Users, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Heart,
+  Baby,
+  Stethoscope,
+  Scan,
+  Users,
+  Sparkles,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: Heart,
     title: "Gynecology",
-    description: "Comprehensive women's health services including screenings, treatments, and preventive care.",
+    description:
+      "Comprehensive women's health services including screenings, treatments, and preventive care.",
     color: "bg-pink-50",
     iconColor: "text-pink-500",
-    link: "/services/gynecology",
+    link: "/gallery",
+    // link: "/services/gynecology",
   },
   {
     icon: Baby,
     title: "Obstetrics",
-    description: "Expert prenatal, delivery, and postnatal care for a healthy pregnancy journey.",
+    description:
+      "Expert prenatal, delivery, and postnatal care for a healthy pregnancy journey.",
     color: "bg-sky-light",
     iconColor: "text-sky",
-    link: "/services/obstetrics",
+    link: "/gallery",
+    // link: "/services/obstetrics",
   },
   {
     icon: Sparkles,
     title: "Fertility Care",
-    description: "Personalized fertility treatments and reproductive health support with compassion.",
+    description:
+      "Personalized fertility treatments and reproductive health support with compassion.",
     color: "bg-purple-50",
     iconColor: "text-purple-500",
-    link: "/services/fertility",
+    link: "/gallery",
+    // link: "/services/fertility",
   },
   {
     icon: Stethoscope,
     title: "Pediatrics",
-    description: "Child-focused healthcare from newborns to adolescents with gentle expertise.",
+    description:
+      "Child-focused healthcare from newborns to adolescents with gentle expertise.",
     color: "bg-amber-50",
     iconColor: "text-amber-500",
-    link: "/services/pediatrics",
+    link: "/gallery",
+    // link: "/services/pediatrics",
   },
   {
     icon: Users,
     title: "Family Medicine",
-    description: "Whole-family healthcare covering preventive care to chronic condition management.",
+    description:
+      "Whole-family healthcare covering preventive care to chronic condition management.",
     color: "bg-mint",
     iconColor: "text-primary",
-    link: "/services/family-medicine",
+    link: "/gallery",
+    // link: "/services/family-medicine",
   },
   {
     icon: Scan,
     title: "Ultrasound",
-    description: "Advanced diagnostic imaging with state-of-the-art 3D/4D ultrasound technology.",
+    description:
+      "Advanced diagnostic imaging with state-of-the-art 3D/4D ultrasound technology.",
     color: "bg-coral/10",
     iconColor: "text-coral",
-    link: "/services/ultrasound",
+    link: "/gallery",
+    // link: "/services/ultrasound",
   },
 ];
 
@@ -88,8 +108,9 @@ const Services = () => {
             <span className="text-gradient">Entire Family</span>
           </h2>
           <p className="text-muted-foreground">
-            From preventive care to specialized treatments, we offer a full spectrum of healthcare 
-            services designed around your family's unique needs.
+            From preventive care to specialized treatments, we offer a full
+            spectrum of healthcare services designed around your family's unique
+            needs.
           </p>
         </motion.div>
 
@@ -139,12 +160,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="gap-2"
-            asChild
-          >
+          <Button variant="outline" size="lg" className="gap-2" asChild>
             <Link to="/services">
               View All Services
               <ArrowRight className="w-4 h-4" />

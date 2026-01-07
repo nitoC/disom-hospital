@@ -5,34 +5,42 @@ import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Mitchell",
+    name: "Sarah Okeke",
     role: "First-time Mother",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
-    content: "The obstetrics team at Disom Hospital made my pregnancy journey so special. From prenatal care to delivery, every step was handled with such care and expertise. I couldn't have asked for a better experience.",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",
+    content:
+      "The obstetrics team at Disom Hospital made my pregnancy journey so special. From prenatal care to delivery, every step was handled with such care and expertise. I couldn't have asked for a better experience.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael & Jennifer Adams",
+    name: "Michael & Jennifer Ugwu",
     role: "Fertility Patients",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
-    content: "After years of trying, the fertility team gave us hope when we had almost given up. Their personalized approach and constant support led to our miracle baby. Forever grateful!",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+    content:
+      "After years of trying, the fertility team gave us hope when we had almost given up. Their personalized approach and constant support led to our miracle baby. Forever grateful!",
     rating: 5,
   },
   {
     id: 3,
-    name: "David Thompson",
+    name: "David Mbakwe",
     role: "Parent of Two",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-    content: "The pediatric department has been looking after my kids since they were born. Dr. Williams and her team are not just doctors, they're family. The kids actually enjoy their visits!",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    content:
+      "The pediatric department has been looking after my kids since they were born. Dr. Williams and her team are not just doctors, they're family. The kids actually enjoy their visits!",
     rating: 5,
   },
   {
     id: 4,
-    name: "Emily Roberts",
+    name: "Chidinma Ude",
     role: "Regular Patient",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
-    content: "The gynecology services here are exceptional. Dr. Chen takes time to listen and explain everything thoroughly. The staff is always friendly and professional. Highly recommend!",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+    content:
+      "The gynecology services here are exceptional. Dr. Chen takes time to listen and explain everything thoroughly. The staff is always friendly and professional. Highly recommend!",
     rating: 5,
   },
 ];
@@ -66,7 +74,9 @@ const Testimonials = () => {
 
   const handlePrev = () => {
     setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const handleNext = () => {
@@ -88,11 +98,11 @@ const Testimonials = () => {
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            What Our{" "}
-            <span className="text-gradient">Patients Say</span>
+            What Our <span className="text-gradient">Patients Say</span>
           </h2>
           <p className="text-muted-foreground">
-            Real stories from real families who trusted us with their healthcare journey.
+            Real stories from real families who trusted us with their healthcare
+            journey.
           </p>
         </motion.div>
 
@@ -139,7 +149,9 @@ const Testimonials = () => {
                             {testimonials[currentIndex].role}
                           </p>
                           <div className="flex gap-0.5 mt-1">
-                            {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
+                            {Array.from({
+                              length: testimonials[currentIndex].rating,
+                            }).map((_, i) => (
                               <Star
                                 key={i}
                                 className="w-4 h-4 text-amber-400 fill-amber-400"
