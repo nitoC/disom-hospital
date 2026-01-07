@@ -13,7 +13,7 @@ const stats = [
   },
   {
     icon: Users,
-    value: 50000,
+    value: 1000,
     suffix: "+",
     label: "Happy Patients",
     color: "text-coral",
