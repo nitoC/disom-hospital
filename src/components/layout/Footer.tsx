@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Caring for life at every stage. Providing exceptional healthcare services with compassion and excellence since 1995.
+              Disom Specialist Hospital is a specialist healthcare facility established with the vision of providing quality healthcare services to all by a team of highly qualified health professionals and specialists.
             </p>
             <div className="flex gap-3">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
@@ -101,13 +101,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
                 <span className="text-sm opacity-80">
-                  123 Healthcare Avenue,<br />Medical District, NY 10001
+                  1A Idemili Dr, Independence Layout,<br />Enugu 400103, Enugu
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:+1234567890" className="text-sm opacity-80 hover:text-primary">
-                  +1 (234) 567-890
+                <a href="tel:08119736394" className="text-sm opacity-80 hover:text-primary">
+                  0811 973 6394
                 </a>
               </li>
               <li className="flex items-center gap-3">

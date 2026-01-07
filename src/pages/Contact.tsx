@@ -80,8 +80,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Visit Us</h4>
                     <p className="text-muted-foreground text-sm">
-                      123 Healthcare Avenue,<br />
-                      Medical District, NY 10001
+                      1A Idemili Dr, Independence Layout,<br />
+                      Enugu 400103, Enugu
                     </p>
                   </div>
                 </div>
@@ -93,8 +93,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
                     <p className="text-muted-foreground text-sm">
-                      Main: +1 (234) 567-890<br />
-                      Emergency: +1 (234) 567-899
+                      Main: 0811 973 6394
                     </p>
                   </div>
                 </div>
