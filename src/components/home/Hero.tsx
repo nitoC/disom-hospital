@@ -1,9 +1,42 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Calendar, Phone, ArrowRight, Shield, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+
+const heroImages = [
+  {
+    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
+    alt: "Gynecology care at Disom Hospital",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&q=80",
+    alt: "Obstetrics and maternity care",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=800&q=80",
+    alt: "Pediatric care for children",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    alt: "Ultrasound diagnostics",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80",
+    alt: "Family medicine and care",
+  },
+];
 
 const Hero = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background Pattern */}
@@ -35,24 +68,37 @@ const Hero = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight"
+              animate={{ 
+                letterSpacing: ["0em", "0.01em", "0em"],
+              }}
+              transition={{ duration: 3, ease: "easeOut", delay: 0.5 }}
+            >
               Caring for{" "}
               <span className="text-gradient">Life</span>
               <br />
               at Every Stage
-            </h1>
+            </motion.h1>
 
-            <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+            <motion.p 
+              className="text-lg text-muted-foreground max-w-xl leading-relaxed"
+              animate={{ opacity: [0.98, 1, 0.98] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
               From pregnancy to pediatrics, from fertility to family care — Disom Hospital 
               provides comprehensive, compassionate healthcare for you and your loved ones.
-            </p>
+            </motion.p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div 
+                whileHover={{ boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" }}
+                className="rounded-lg"
+              >
                 <Button
                   size="lg"
-                  className="gap-2 bg-gradient-primary hover:opacity-90 shadow-elevated text-base px-8"
+                  className="gap-2 bg-gradient-primary hover:opacity-90 shadow-elevated text-base px-8 transition-all duration-300"
                   asChild
                 >
                   <Link to="/appointment">
@@ -62,11 +108,14 @@ const Hero = () => {
                   </Link>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div 
+                whileHover={{ boxShadow: "0 0 15px hsl(var(--primary) / 0.15)" }}
+                className="rounded-lg"
+              >
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 border-2 text-base px-8"
+                  className="gap-2 border-2 text-base px-8 transition-all duration-300"
                   asChild
                 >
                   <a href="tel:+1234567890">
@@ -98,7 +147,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Hero Image */}
+          {/* Cinematic Image Slideshow */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -106,20 +155,78 @@ const Hero = () => {
             className="relative hidden lg:block"
           >
             <div className="relative">
-              {/* Main Image */}
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-elevated">
-                <img
-                  src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80"
-                  alt="Medical professionals at Disom Hospital"
-                  className="w-full h-[500px] object-cover"
+              {/* Main Image Container with Cinematic Reveal */}
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-elevated h-[500px]">
+                {/* Grain Overlay for Realism */}
+                <div 
+                  className="absolute inset-0 z-20 opacity-[0.03] pointer-events-none"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+                
+                <AnimatePresence mode="sync">
+                  {heroImages.map((image, index) => (
+                    index === currentIndex && (
+                      <motion.div
+                        key={index}
+                        className="absolute inset-0"
+                        initial={{ 
+                          clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+                          filter: "blur(8px)",
+                        }}
+                        animate={{ 
+                          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                          filter: "blur(0px)",
+                        }}
+                        exit={{ 
+                          opacity: 0,
+                          scale: 1.02,
+                          transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
+                        }}
+                        transition={{ 
+                          clipPath: { duration: 2.8, ease: [0.22, 1, 0.36, 1] },
+                          filter: { duration: 1.5, delay: 1.3, ease: "easeOut" },
+                        }}
+                      >
+                        <motion.img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                          animate={{ 
+                            scale: [1, 1.03],
+                          }}
+                          transition={{ 
+                            duration: 8,
+                            ease: "linear",
+                          }}
+                        />
+                      </motion.div>
+                    )
+                  ))}
+                </AnimatePresence>
+                
+                {/* Ambient Light Gradient */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-t from-foreground/25 via-transparent to-primary/5 z-10 pointer-events-none"
+                  animate={{ 
+                    opacity: [0.8, 1, 0.8],
+                  }}
+                  transition={{ 
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                
+                {/* Soft Edge Vignette */}
+                <div className="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_60px_rgba(0,0,0,0.1)]" />
               </div>
 
               {/* Floating Cards */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -left-8 top-20 glass-card rounded-2xl p-4 z-20"
               >
                 <div className="flex items-center gap-3">
@@ -135,7 +242,7 @@ const Hero = () => {
 
               <motion.div
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3.5, repeat: Infinity }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -right-4 bottom-20 glass-card rounded-2xl p-4 z-20"
               >
                 <div className="flex items-center gap-3">
