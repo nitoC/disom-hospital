@@ -49,14 +49,25 @@ const Footer = () => {
               and specialists.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+              {[
+                {
+                  icon: Facebook,
+                  link: "https://web.facebook.com/disom.hospital/",
+                },
+                { icon: Twitter, link: "#" },
+                { icon: Instagram, link: "#" },
+                {
+                  icon: Linkedin,
+                  link: "https://www.linkedin.com/in/disom-specialist-hospital-340740209/?originalSubdomain=ng",
+                },
+              ].map((Icon, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={Icon.link || "#"}
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon.icon className="w-5 h-5" />
                 </motion.a>
               ))}
             </div>
