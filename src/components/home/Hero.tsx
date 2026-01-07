@@ -43,8 +43,8 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-              From pregnancy to pediatrics, from fertility to family care — Disom Hospital 
-              provides comprehensive, compassionate healthcare for you and your loved ones.
+              Disom Specialist Hospital is a specialist healthcare facility providing quality healthcare services 
+              in obstetrics and gynecology, pediatrics, surgeries, fertility management, family medicine, ultrasound and laboratory services.
             </p>
 
             {/* CTA Buttons */}
@@ -69,7 +69,7 @@ const Hero = () => {
                   className="gap-2 border-2 text-base px-8"
                   asChild
                 >
-                  <a href="tel:+1234567890">
+                  <a href="tel:08119736394">
                     <Phone className="w-5 h-5" />
                     Call Now
                   </a>
