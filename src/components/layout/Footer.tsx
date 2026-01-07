@@ -28,8 +28,14 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                <Heart className="w-6 h-6 text-primary-foreground" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                <img
+                  src="/dis-logo.png"
+                  alt="Disom Hospital Logo"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="text-2xl font-display font-bold">Disom</span>
