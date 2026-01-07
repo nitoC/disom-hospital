@@ -36,20 +36,24 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
-              Caring for{" "}
-              <span className="text-gradient">Life</span>
+              Caring for <span className="text-gradient">Life</span>
               <br />
               at Every Stage
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Disom Specialist Hospital is a specialist healthcare facility providing quality healthcare services 
-              in obstetrics and gynecology, pediatrics, surgeries, fertility management, family medicine, ultrasound and laboratory services.
+              Disom Specialist Hospital is a specialist healthcare facility
+              providing quality healthcare services in obstetrics and
+              gynecology, pediatrics, surgeries, fertility management, family
+              medicine, ultrasound and laboratory services.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   size="lg"
                   className="gap-2 bg-gradient-primary hover:opacity-90 shadow-elevated text-base px-8"
@@ -62,7 +66,10 @@ const Hero = () => {
                   </Link>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   size="lg"
                   variant="outline"
@@ -127,8 +134,12 @@ const Hero = () => {
                     <Users className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-2xl font-display font-bold text-foreground">50+</p>
-                    <p className="text-xs text-muted-foreground">Expert Doctors</p>
+                    <p className="text-2xl font-display font-bold text-foreground">
+                      10+
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Expert Doctors
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -143,8 +154,12 @@ const Hero = () => {
                     <Star className="w-6 h-6 text-coral" />
                   </div>
                   <div>
-                    <p className="text-2xl font-display font-bold text-foreground">4.9</p>
-                    <p className="text-xs text-muted-foreground">Patient Rating</p>
+                    <p className="text-2xl font-display font-bold text-foreground">
+                      4.9
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Patient Rating
+                    </p>
                   </div>
                 </div>
               </motion.div>

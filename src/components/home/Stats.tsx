@@ -21,7 +21,7 @@ const stats = [
   },
   {
     icon: Heart,
-    value: 50,
+    value: 10,
     suffix: "+",
     label: "Expert Doctors",
     color: "text-pink-500",
@@ -37,7 +37,15 @@ const stats = [
   },
 ];
 
-const AnimatedCounter = ({ value, suffix, inView }: { value: number; suffix: string; inView: boolean }) => {
+const AnimatedCounter = ({
+  value,
+  suffix,
+  inView,
+}: {
+  value: number;
+  suffix: string;
+  inView: boolean;
+}) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -103,7 +111,11 @@ const Stats = () => {
               >
                 <stat.icon className={`w-8 h-8 ${stat.color}`} />
               </div>
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} inView={isInView} />
+              <AnimatedCounter
+                value={stat.value}
+                suffix={stat.suffix}
+                inView={isInView}
+              />
               <p className="text-muted-foreground mt-2 text-sm">{stat.label}</p>
             </motion.div>
           ))}
