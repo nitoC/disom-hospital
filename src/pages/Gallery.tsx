@@ -4,7 +4,7 @@ import { Maximize2, X, ChevronRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-// Added aspect ratio properties to simulate different heights/widths in the masonry flow
+// Added aspect ratio properties to simulate different heights/widths in the masonry
 const GALLERY_DATA = [
   {
     id: 1,
