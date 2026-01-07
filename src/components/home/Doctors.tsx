@@ -66,7 +66,7 @@ const Doctors = () => {
           </p>
         </motion.div>
 
-        {/* Doctors Grid */}
+        {/* Doctors Grid **/}
         <motion.div
           variants={containerVariants}
           initial="hidden"
