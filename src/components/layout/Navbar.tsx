@@ -49,8 +49,15 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-2"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-soft">
-                <Heart className="w-5 h-5 text-primary-foreground" />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-soft">
+                {/* <Heart className="w-5 h-5 text-primary-foreground" /> */}
+                <img
+                  src="/dis-logo.png"
+                  alt="Disom Hospital Logo"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-display font-bold text-foreground">

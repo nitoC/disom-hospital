@@ -28,8 +28,14 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                <Heart className="w-6 h-6 text-primary-foreground" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                <img
+                  src="/dis-logo.png"
+                  alt="Disom Hospital Logo"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="text-2xl font-display font-bold">Disom</span>
@@ -43,14 +49,26 @@ const Footer = () => {
               and specialists.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+              {[
+                {
+                  icon: Facebook,
+                  link: "https://web.facebook.com/disom.hospital/",
+                },
+                { icon: Twitter, link: "#" },
+                { icon: Instagram, link: "#" },
+                {
+                  icon: Linkedin,
+                  link: "https://www.linkedin.com/in/disom-specialist-hospital-340740209/?originalSubdomain=ng",
+                },
+              ].map((Icon, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={Icon.link || "#"}
+                  target="__blank"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon.icon className="w-5 h-5" />
                 </motion.a>
               ))}
             </div>
