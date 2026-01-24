@@ -71,7 +71,7 @@ const CTA = () => {
                 className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated text-base px-8"
                 asChild
               >
-                <Link to="/appointment">
+                <Link to="/book-appointment">
                   <Calendar className="w-5 h-5" />
                   Book Appointment
                   <ArrowRight className="w-4 h-4 ml-1" />
@@ -85,9 +85,9 @@ const CTA = () => {
                 className="gap-2 border-2 border-primary-foreground/30 hover:bg-primary-foreground/10 text-base px-8"
                 asChild
               >
-                <a href="tel:+1234567890">
+                <a href="tel:+2348119736394">
                   <Phone className="w-5 h-5" />
-                  Emergency: +1 (234) 567-890
+                  Emergency: +234 8119736394
                 </a>
               </Button>
             </motion.div>

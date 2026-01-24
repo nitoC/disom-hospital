@@ -76,7 +76,7 @@ const Hero = () => {
                   className="gap-2 border-2 text-base px-8"
                   asChild
                 >
-                  <a href="tel:08119736394">
+                  <a href="tel:+2348119736394">
                     <Phone className="w-5 h-5" />
                     Call Now
                   </a>
