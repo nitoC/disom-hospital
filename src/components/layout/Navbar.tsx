@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Our Doctors", path: "/doctors" },
   { name: "Gallery", path: "/gallery" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "/contact-us" },
 ];
 
 const Navbar = () => {
@@ -158,7 +158,7 @@ const Navbar = () => {
               ))}
               <div className="flex flex-col gap-3 mt-4">
                 <Button variant="outline" className="gap-2" asChild>
-                  <a href="tel:+1234567890">
+                  <a href="tel:+2348119736394">
                     <Phone className="w-4 h-4" />
                     Emergency Call
                   </a>
