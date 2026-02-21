@@ -34,13 +34,13 @@ const services = [
   },
   {
     icon: Sparkles,
-    title: "Fertility Care",
+    title: "Laboratory Services",
     description:
-      "Personalized fertility treatments and reproductive health support with compassion.",
+      "Advanced diagnostic testing and laboratory services for accurate health assessments.",
     color: "bg-purple-50",
     iconColor: "text-purple-500",
     link: "/gallery",
-    // link: "/services/fertility",
+    // link: "/services/laboratory",
   },
   {
     icon: Stethoscope,

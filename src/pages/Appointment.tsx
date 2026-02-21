@@ -5,7 +5,13 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Calendar, Clock, User, CheckCircle, Heart, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -16,11 +22,22 @@ const services = [
   "Pediatrics",
   "Family Medicine",
   "Ultrasound Services",
+  "Laboratory Services",
 ];
 
 const timeSlots = [
-  "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-  "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
+  "9:00 AM",
+  "9:30 AM",
+  "10:00 AM",
+  "10:30 AM",
+  "11:00 AM",
+  "11:30 AM",
+  "2:00 PM",
+  "2:30 PM",
+  "3:00 PM",
+  "3:30 PM",
+  "4:00 PM",
+  "4:30 PM",
 ];
 
 const Appointment = () => {
@@ -31,9 +48,9 @@ const Appointment = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     toast({
@@ -45,7 +62,7 @@ const Appointment = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -62,12 +79,11 @@ const Appointment = () => {
               Book Appointment
             </span>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              Schedule Your{" "}
-              <span className="text-gradient">Visit</span>
+              Schedule Your <span className="text-gradient">Visit</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Book your appointment online and we'll confirm your slot within 2 hours. 
-              Same-day appointments available for urgent cases.
+              Book your appointment online and we'll confirm your slot within 2
+              hours. Same-day appointments available for urgent cases.
             </p>
           </motion.div>
         </div>
@@ -95,8 +111,9 @@ const Appointment = () => {
                   Appointment Requested!
                 </h2>
                 <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-                  Thank you for choosing Disom Hospital. We'll review your request and 
-                  confirm your appointment within 2 hours via email or phone.
+                  Thank you for choosing Disom Hospital. We'll review your
+                  request and confirm your appointment within 2 hours via email
+                  or phone.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button
@@ -127,7 +144,9 @@ const Appointment = () => {
                     <h2 className="text-2xl font-display font-bold text-foreground">
                       Book Your Appointment
                     </h2>
-                    <p className="text-muted-foreground">Fill in your details below</p>
+                    <p className="text-muted-foreground">
+                      Fill in your details below
+                    </p>
                   </div>
                 </div>
 
@@ -186,7 +205,10 @@ const Appointment = () => {
                       </SelectTrigger>
                       <SelectContent>
                         {services.map((service) => (
-                          <SelectItem key={service} value={service.toLowerCase()}>
+                          <SelectItem
+                            key={service}
+                            value={service.toLowerCase()}
+                          >
                             {service}
                           </SelectItem>
                         ))}
@@ -260,8 +282,11 @@ const Appointment = () => {
 
                   <p className="text-center text-sm text-muted-foreground">
                     For urgent appointments, please call{" "}
-                    <a href="tel:+1234567890" className="text-primary font-medium">
-                      +1 (234) 567-890
+                    <a
+                      href="tel:+2348119736394"
+                      className="text-primary font-medium"
+                    >
+                      +234 811 973 6394
                     </a>
                   </p>
                 </form>

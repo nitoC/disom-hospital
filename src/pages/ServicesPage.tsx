@@ -45,14 +45,14 @@ const services = [
   },
   {
     icon: Sparkles,
-    title: "Fertility Care",
+    title: "Laboratory Services",
     description:
-      "Personalized fertility treatments and reproductive health support with compassion and cutting-edge technology.",
+      "Advanced diagnostic testing and laboratory services for accurate health assessments.",
     features: [
-      "Fertility assessments",
-      "IVF & IUI treatments",
-      "Egg freezing",
-      "Counseling support",
+      "Blood tests",
+      "Hormone panels",
+      "Thyroid function tests",
+      "Infectious disease testing",
     ],
     color: "bg-purple-50",
     iconColor: "text-purple-500",
