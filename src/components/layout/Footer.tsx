@@ -124,6 +124,7 @@ const Footer = () => {
                 "Fertility Care",
                 "Ultrasound",
                 "Family Medicine",
+                "Laboratory Services",
               ].map((item) => (
                 <li key={item}>
                   <Link
