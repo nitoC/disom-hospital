@@ -170,7 +170,7 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a
-                  href="mailto:care@disom.hospital"
+                  href="mailto:care@disom-hospital.ng"
                   className="text-sm opacity-80 hover:text-primary"
                 >
                   care@disom-hospital.ng
