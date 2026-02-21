@@ -119,9 +119,9 @@ const Contact = () => {
                       Email Us
                     </h4>
                     <p className="text-muted-foreground text-sm">
-                      General: care@disom.hospital
+                      General: care@disom-hospital.ng
                       <br />
-                      Appointments: book@disom.hospital
+                      Appointments: book@disom-hospital.ng
                     </p>
                   </div>
                 </div>

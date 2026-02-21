@@ -173,7 +173,7 @@ const Footer = () => {
                   href="mailto:care@disom.hospital"
                   className="text-sm opacity-80 hover:text-primary"
                 >
-                  care@disom.hospital
+                  care@disom-hospital.ng
                 </a>
               </li>
               <li className="flex items-start gap-3">
